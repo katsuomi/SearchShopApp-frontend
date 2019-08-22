@@ -1,24 +1,42 @@
 import * as React from "react"
-import { connect } from 'react-redux'
-import {} from "../actions/review"
+import axios from 'axios'
 
-interface Props {
-  average: number
+const RAILS_ROOT_URL = process.env.REACT_APP_RAILS_ROOT_URL
+
+interface Props{
+  id: string
 }
-
-interface State {
-  reviews: {average: number}
+interface State{
+  average: any
 }
 
 class AverageStars extends React.Component<Props,State>{
+  constructor(props: Props){
+    super(props)
+    this.state={
+      average: 0
+    }
+  }
+  async componentDidMount(){
+    let average = 0
+    let sum = 0
+    await axios.get(`${RAILS_ROOT_URL}/shop_show?shop_id=${this.props.id}`)
+    .then((response) => {
+      response.data.data.map((element: { star: number; }) => {
+        sum = sum + element.star
+      })
+      average = sum / response.data.data.length
+      this.setState({average: average})
+    })
+  }
   render(){
     return (
       <React.Fragment>
         <div className="star-rating">
-          {this.props.average === NaN ?
+          {this.state.average === NaN ?
             <div className="star-rating-front" style={{width: "0%"}}>★★★★★</div>
           :
-            <div className="star-rating-front" style={{width: this.props.average/5*100+"%"}}>★★★★★</div>
+            <div className="star-rating-front" style={{width: this.state.average/5*100+"%"}}>★★★★★</div>
           } 
           <div className="star-rating-back">★★★★★</div>     
         </div>
@@ -27,5 +45,4 @@ class AverageStars extends React.Component<Props,State>{
   }  
 }
 
-const mapStateToProps = (state: State) => ({average: state.reviews.average})
-export default connect(mapStateToProps,null)(AverageStars)
+export default AverageStars

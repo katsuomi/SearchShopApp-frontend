@@ -2,7 +2,6 @@ import axios from 'axios'
 
 export const SUBMIT_REVIEW = 'SUBMIT_REVIEW'
 export const READ_REVIEWS = 'READ_REVIEWS'
-export const RESET_REVIEW_DATA = 'RESET_REVIEW_DATA'
 
 const RAILS_ROOT_URL = process.env.REACT_APP_RAILS_ROOT_URL
 
@@ -29,7 +28,7 @@ export const submitReview = (data: {},shopId: string) => async (dispatch: (arg0:
   dispatch({type: SUBMIT_REVIEW,average: average,shopReviewsArray: responceArray})
 }
 
-export const readReviews = (shopId: any) => async (dispatch: (arg0: { type: string; average: number; shopReviewsArray: any[]; }) => void) => {
+export const readReviews = (shopId: string) => async (dispatch: (arg0: { type: string; average: number; shopReviewsArray: any[]; }) => void) => {
   let average = 0
   let sum = 0
   let responceArray: never[] = []
@@ -45,9 +44,4 @@ export const readReviews = (shopId: any) => async (dispatch: (arg0: { type: stri
   })
 
   dispatch({type: READ_REVIEWS,average: average,shopReviewsArray: responceArray})
-
-}
-
-export const resetReviewData = () => (dispatch: (arg0: { type: string; }) => void) => {
-  dispatch({type: RESET_REVIEW_DATA})
 }

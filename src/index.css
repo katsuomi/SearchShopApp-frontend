@@ -67,6 +67,7 @@ body {
 
 .shopCardStyle{
   width:100%;
+  min-height: 200px;
   max-width:1000px;
 }
 

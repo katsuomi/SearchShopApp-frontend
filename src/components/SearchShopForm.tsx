@@ -1,7 +1,6 @@
 import * as React from "react";
 import { connect } from 'react-redux'
 import {searchNearShops,searchResultsDiplayOn} from "../actions/search"
-import {resetReviewData} from "../actions/review"
 import InputLabel from '@material-ui/core/InputLabel'
 import MenuItem from '@material-ui/core/MenuItem'
 import FormControl from '@material-ui/core/FormControl'
@@ -9,7 +8,6 @@ import Select from '@material-ui/core/Select'
 import Button from '@material-ui/core/Button'
 
 interface Props{
-  resetReviewData: () => void
   searchResultsDiplayOn: () => void
   searchNearShops: (radius: number) => void
 }
@@ -26,10 +24,6 @@ class SearchShopForm extends React.Component<Props,State>{
     }
     this.onChangeRadius = this.onChangeRadius.bind(this)
     this.onClick = this.onClick.bind(this)
-  }
-
-  async componentDidMount(){
-    await this.props.resetReviewData()
   }
 
   async onChangeRadius(e: any){
@@ -73,6 +67,6 @@ class SearchShopForm extends React.Component<Props,State>{
   }
 }
 
-const mapDispatchToProps = ({searchNearShops,searchResultsDiplayOn,resetReviewData})
+const mapDispatchToProps = ({searchNearShops,searchResultsDiplayOn})
 
 export default connect(null, mapDispatchToProps)(SearchShopForm)

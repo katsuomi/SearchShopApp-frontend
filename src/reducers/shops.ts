@@ -19,12 +19,6 @@ const initialState: State = {
 
 export default (state = initialState, action: { type: string; resultShopsArray: string[] | number[]; paginationCount: number; range: number; resultOneShop: string[] | number[]; }) => {
   switch (action.type){
-    case SEARCH_NEAR_SHOPS:
-      return {
-        resultShopsArray: action.resultShopsArray,
-        paginationCount: action.paginationCount,
-        range: action.range
-      }
     case SEARCH_SHOP_FROM_ID:
       return {
         resultOneShop: action.resultOneShop,
@@ -32,6 +26,7 @@ export default (state = initialState, action: { type: string; resultShopsArray: 
         paginationCount: 1,
         range: 1
       }
+    case SEARCH_NEAR_SHOPS:
     case GO_NEXT_PAGINATION:
       return {
         resultShopsArray: action.resultShopsArray,

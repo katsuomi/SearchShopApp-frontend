@@ -44,7 +44,7 @@ export const searchShopFromId = (id: string) => async (dispatch: Dispatch)=>{
 }
 
 export const goNextPagination = (range: number,pageCount: any) => async (dispatch: Dispatch)=>{
-  await navigator.geolocation.getCurrentPosition(function(position){
+  await navigator.geolocation.getCurrentPosition(position => {
     axios.get(GURUNAVI_ROOT_URL,{
       params: {
         keyid: API_KEY,

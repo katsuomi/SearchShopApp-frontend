@@ -29,13 +29,13 @@ class ShopProfile extends React.Component<Props,{}>{
       <React.Fragment>
         {this.props.resultOneShop ?
           <div>
-            <Card className="marginTop100px ">
+            <Card className="marginTop100px">
               <CardContent className="positionRelative">
                 <p className="bold">{this.props.resultOneShop.name}</p> 
                 {this.props.resultOneShop.image_url && this.props.resultOneShop.image_url.shop_image1 ?
-                  <img src={this.props.resultOneShop.image_url.shop_image1} alt="shop_image" width="100%" /> 
+                  <img src={this.props.resultOneShop.image_url.shop_image1} alt="shop_image" width="100%"/> 
                 :
-                  <img src={`${process.env.PUBLIC_URL}/image/noImage.png`} alt="shop_image" width="100%"/>
+                  <img src={`${process.env.PUBLIC_URL}/images/noImage.png`} alt="shop_image" width="100%"/>
                 }
                 <p>{this.props.resultOneShop.address}</p>
                 <a className="positionAbsolute" style={{bottom: "5px",right: "10px"}} href={"tel:"+this.props.resultOneShop.tel}>
@@ -46,7 +46,7 @@ class ShopProfile extends React.Component<Props,{}>{
                   </Button>
                 </a>
                 <p className="center">{this.props.resultOneShop.opentime}</p> 
-                <AverageStars />
+                <AverageStars id={this.props.id}/>
               </CardContent>
             </Card>
             <SubmitReview id={this.props.id} />
