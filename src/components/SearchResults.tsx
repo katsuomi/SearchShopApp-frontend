@@ -5,7 +5,7 @@ import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import Grid from '@material-ui/core/Grid'
 import {Link} from "react-router-dom"
-import { searchResultsDiplayOff, searchResultsDiplayOn } from '../actions/search';
+import { searchResultsDiplayOff } from '../actions/search';
 import DisplayOnGoogleMaps from './DisplayOnGoogleMaps';
 import AverageStars from "./AverageStars";
 
