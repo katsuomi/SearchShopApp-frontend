@@ -2,7 +2,7 @@
 
 ##セットアップ方法
 
-$ git clone 
+$ git clone https://github.com/katsuomi/SearchShopApp-view.git
 
 $ cd SearchShopApp-view
 
