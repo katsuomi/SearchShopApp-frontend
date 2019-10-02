@@ -1,6 +1,6 @@
 # README
 
-##セットアップ方法
+## セットアップ方法
 
 $ git clone https://github.com/katsuomi/SearchShopApp-view.git
 
