@@ -1,0 +1,11 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/SearchShopApp-frontend
+    command: sh -c "npm install && npm start"
+    ports:
+     - "3000:3000"

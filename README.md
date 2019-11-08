@@ -2,7 +2,7 @@
 
 ## 💬 About
 
-近くのお店が検索できるアプリ~SearchShopApp~のフロントエンドです。
+近くのお店が検索できるアプリ-SearchShopApp-のフロントエンドです。
 JavaScriptライブラリReact.jsを利用。
 
 ## 🌻 Version
