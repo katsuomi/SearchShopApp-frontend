@@ -1,5 +1,5 @@
 {
-  "name": "searchshopapp-frontend-typescript",
+  "name": "searchshopapp-view-typescript",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,7 +21,7 @@
     "react-loader-spinner": "^3.1.2",
     "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.1.1",
+    "react-scripts": "^3.2.0",
     "react-star-rating-component": "^1.4.1",
     "react-star-ratings": "^2.3.0",
     "redux": "^4.0.4",
@@ -53,6 +53,7 @@
   "devDependencies": {
     "@types/react": "^16.9.2",
     "@types/react-js-pagination": "^3.0.3",
-    "@types/react-redux": "^7.1.2"
+    "@types/react-redux": "^7.1.2",
+    "@typescript-eslint/eslint-plugin": "^2.6.1"
   }
 }
