@@ -47,3 +47,19 @@ $ docker-compose ps
 |host||
 |:-:|:-:|
 |frontend|[http://localhost:3000](http://localhost:3000)|
+
+## ⚠️ note
+**envファイルに環境変数の設定が必要です。**
+
+.envファイルを作成後、以下のように値を入れてください。
+```
+  (.env)
+  REACT_APP_API_KEY = "*********************************"
+  REACT_APP_RAILS_ROOT_URL = "http://localhost:3000/api/v1"
+  REACT_APP_GURUNAVI_ROOT_URL = "https://api.gnavi.co.jp/RestSearchAPI/v3/"
+  REACT_APP_GOOGLE_MAPS_API_KEY = "*********************************"
+```
+
+
+
+
