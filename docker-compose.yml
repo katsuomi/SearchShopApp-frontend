@@ -4,8 +4,14 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    environment:
+      - REACT_APP_API_KEY=$REACT_APP_API_KEY
+      - REACT_APP_RAILS_ROOT_URL=$REACT_APP_RAILS_ROOT_URL
+      - REACT_APP_GURUNAVI_ROOT_URL=$REACT_APP_GURUNAVI_ROOT_URL
+      - REACT_APP_GOOGLE_MAPS_API_KEY=$REACT_APP_GOOGLE_MAPS_API_KEY
     volumes:
       - .:/SearchShopApp-frontend
-    command: sh -c "npm start"
+    command: sh -c "npm start && echo $$REACT_APP_API_KEY && echo $$REACT_APP_RAILS_ROOT_URL && echo $$REACT_APP_GURUNAVI_ROOT_URL && echo $$REACT_APP_GOOGLE_MAPS_API_KEY"
     ports:
      - "3000:3000"
+ 
