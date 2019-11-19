@@ -36,11 +36,7 @@ cd SearchShopApp-frontend
 $ docker-compose build
 
 # Dockerコンテナの起動
-$ docker-compose up -d
-
-# 確認
-$ docker-compose ps
-```
+$ docker-compose up
 
 下記のコンテナが起動していれば、OKです。
 
@@ -59,7 +55,3 @@ $ docker-compose ps
   REACT_APP_GURUNAVI_ROOT_URL = "https://api.gnavi.co.jp/RestSearchAPI/v3/"
   REACT_APP_GOOGLE_MAPS_API_KEY = "*********************************"
 ```
-
-
-
-
