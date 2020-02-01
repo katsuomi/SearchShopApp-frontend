@@ -37,18 +37,20 @@ $ docker-compose build
 # Start Docker container
 $ docker-compose up
 
-If the following local server started, it's ok. 
+# If the following local server started, it's ok. 
 
 |host||
 |:-:|:-:|
 |frontend|[http://localhost:3000](http://localhost:3000)|
+
+```
 
 ## ⚠️ note
 **Environment variable setting is required.**
 
 Please describe the following settings after creating .env file.
 
-(.env)
+```(.env)
 REACT_APP_API_KEY = "*********************************"
 REACT_APP_RAILS_ROOT_URL = "http://localhost:3000/api/v1"
 REACT_APP_GURUNAVI_ROOT_URL = "https://api.gnavi.co.jp/RestSearchAPI/v3/"
