@@ -38,7 +38,7 @@ $ docker-compose build
 $ docker-compose up
 ```
 
-# If the following local server started, it's ok. 
+If the following local server started, it's ok. 
 
 |host||
 |:-:|:-:|
