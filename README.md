@@ -36,14 +36,13 @@ $ docker-compose build
 
 # Start Docker container
 $ docker-compose up
+```
 
 # If the following local server started, it's ok. 
 
 |host||
 |:-:|:-:|
 |frontend|[http://localhost:3000](http://localhost:3000)|
-
-```
 
 ## ⚠️ note
 **Environment variable setting is required.**
